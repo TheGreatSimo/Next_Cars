@@ -27,19 +27,20 @@ export default async function Home() {
           <CustomFilter />
         </div>
 
+      </div>
+      <div>
         {!isDataEmpty ? 
         (
           <section>
             <div className="home__cars-wrapper" >
               {allCars?.map((item) =>
-                  <CarCard />
+                  <CarCard car={item} key={item} />
                   )}
             </div>
           </section>
         )
         :
         (<h2>No cards here brda</h2>)}
-
       </div>
     </main>
   );
